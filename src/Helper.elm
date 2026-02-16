@@ -117,7 +117,7 @@ videogames =
     ]
 
 
-getVideogameGenres : List Videogame -> List (List String)
+getVideogameGenres : List { title : String, releaseYear : Int, available : Bool, downloads : Int, genres : List String } -> List (List String)
 getVideogameGenres genres =
     List.map .genres genres
 
