@@ -94,7 +94,7 @@ onlyStudents list =
 type alias Videogame =
     { title : String
     , releaseYear : Int
-    , avaible : Bool
+    , available : Bool
     , downloads : Int
     , genres : List String
     }
@@ -104,20 +104,20 @@ videogames : List Videogame
 videogames =
     [ { title = "Control"
       , releaseYear = 2019
-      , avaible = True
+      , available = True
       , downloads = 50000
       , genres = [ "Action", "Shooter" ]
       }
     , { title = "Ocarina of Time"
       , releaseYear = 1998
-      , avaible = True
+      , available = True
       , downloads = 100000
       , genres = [ "Action", "Adventure" ]
       }
     ]
 
 
-getVideogameGenres : List { title : String, releaseYear : Int, available : Bool, downloads : Int, genres : List String } -> List (List String)
+getVideogameGenres : List Videogame -> List (List String)
 getVideogameGenres genres =
     List.map .genres genres
 
